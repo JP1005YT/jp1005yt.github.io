@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Teste</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .circle-blue {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(blue, rgb(129, 146, 255), blue);
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        .circle-white {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="https://portifolio.joaogirotto.com/">link</a>
+    <div class="circle-blue">
+        <div class="circle-white"></div>
+    </div>
 
     <script>
         window.location.href = "https://portifolio.joaogirotto.com/"
